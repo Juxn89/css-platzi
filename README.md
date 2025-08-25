@@ -1,5 +1,4 @@
-# basic-css-grid-platzi
-Curso de CSS Grid Básico
+# Basic CSS Grid Course
 
 <!-- Custom CSS for README styling -->
 <style>
@@ -11,6 +10,16 @@ Curso de CSS Grid Básico
     border-radius: 16px;
     margin-bottom: 24px;
     font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .header a {
+    color: #fff !important;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .header a:hover {
+    color: #222 !important;
+    text-decoration: underline;
   }
   .topics-table {
     width: 100%;
