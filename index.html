@@ -1,11 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid - Basic</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid - Basic Course Navigation</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #38e7b6;
+      --secondary: #4f8cff;
+      --bg: #181c24;
+      --card-bg: #23283a;
+      --text: #f3f3f3;
+      --muted: #b0b8c9;
+      --accent: #fff;
+      --link-hover: #38e7b6;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+      background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+      border-radius: 0 0 24px 24px;
+      margin-bottom: 2rem;
+    }
+
+      .header h1 {
+        margin: 0 0 0.5rem 0;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+      }
+
+      .header p {
+        margin: 0;
+        color: var(--accent);
+        font-size: 1.1rem;
+        opacity: 0.85;
+      }
+
+    .nav-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .nav-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
+      padding: 1.5rem 1.2rem;
+      min-width: 260px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+      .nav-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 6px 32px 0 rgba(56,231,182,0.18);
+      }
+
+    .nav-label {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 0.25rem 0.75rem;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.5px;
+      display: inline-block;
+    }
+
+    .nav-desc {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 1.1rem;
+      min-height: 48px;
+    }
+
+    .nav-link {
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+      .nav-link:hover {
+        color: var(--link-hover);
+        text-decoration: underline;
+      }
+
+    .footer {
+      margin-top: auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--muted);
+      padding: 2rem 0 1.5rem 0;
+    }
+
+      .footer .flag-img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-left: 6px;
+      }
+  </style>
 </head>
 <body>
-    
+  <div class="header">
+    <h1>✨ Basic CSS Grid Course</h1>
+    <p>Navigate through the main topics and examples of the course</p>
+  </div>
+  <main>
+    <section class="nav-list">
+      <div class="nav-card">
+        <span class="nav-label">Grid Container</span>
+        <div class="nav-desc">Learn how to define a grid container and its basic properties to start building grid layouts.</div>
+        <a class="nav-link" href="container.html">Go to Container Example →</a>
+      </div>
+      <div class="nav-card">
+        <span class="nav-label">Grid Functions</span>
+        <div class="nav-desc">Explore special grid functions like <code>minmax</code> and <code>repeat</code> for dynamic layouts.</div>
+        <a class="nav-link" href="functions.html">Go to Functions Example →</a>
+      </div>
+      <div class="nav-card">
+        <span class="nav-label">Project Example</span>
+        <div class="nav-desc">See a practical project using CSS Grid to create a modern, responsive food site layout.</div>
+        <a class="nav-link" href="proyect.html">Go to Project Example →</a>
+      </div>
+      <div class="nav-card">
+        <span class="nav-label">Align Properties</span>
+        <div class="nav-desc">Discover how to align grid items using properties like <code>justify-items</code> and <code>align-items</code>.</div>
+        <a class="nav-link" href="align.html">Go to Align Example →</a>
+      </div>
+      <div class="nav-card">
+        <span class="nav-label">Special Keywords</span>
+        <div class="nav-desc">See how special CSS Grid keywords like <code>fr</code>, <code>min-content</code>, <code>max-content</code>, and <code>auto-fill</code> work in practice.</div>
+        <a class="nav-link" href="keyboards.html">Go to Keywords Example →</a>
+      </div>
+    </section>
+  </main>
+  <div class="footer">
+    Made with <span title="love">❤️</span> and <span title="coffee">☕</span> from
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg" alt="Nicaragua Flag" class="flag-img">
+  </div>
 </body>
 </html>
