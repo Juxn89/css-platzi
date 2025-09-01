@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pseudo-classes</title>
+	<style>
+		a:link {
+			color: #0A3A6B;
+		}
+
+		a:visited {
+			color: #0A0A6B;
+		}
+		
+		a:hover {
+			color: #ffffff;			
+			background-color: #3A0A6B;
+		}
+
+		p:not(.maravillas) {
+			color: red;
+		}
+
+		.container div:first-child {
+			color: lightgreen;
+		}
+
+	</style>
+</head>
+<body>
+  <a href="#">Alice</a>
+
+	<p>en el</p>
+	<p class="maravillas">pa&iacute;</p>
+
+	<div class="container">
+		<div>Alice</div>
+		<div>Alice</div>
+		<div>Alice</div>
+	</div>
+</body>
+</html>
