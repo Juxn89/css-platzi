@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Transforms 2D and 3D</title>
+
+	<style>
+		.shadow {
+			background: lightgray;
+			width: 100px;
+			height: 100px;
+		}
+
+		.circle {
+			width: 100px;
+			height: 100px;
+			background: #00C9FF;
+			background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF); 
+			background: linear-gradient(to right, #92FE9D, #00C9FF);
+			border-radius: 50%;
+		}
+
+		.circle:hover {
+			transform: translate(-20px, 20px); /* axis-x & axis-y  */
+			/* transform: translateX(-20); */
+		}
+	</style>
+</head>
+<body>
+	<div class="shadow">
+		<div class="circle"></div>
+	</div>
+</body>
+</html>
