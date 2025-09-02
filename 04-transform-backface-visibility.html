@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Transform - Backface Visibility</title>
+	<style>
+		:root {
+			--primary: #005C97;
+		}
+
+		.card {
+			width: 200px;
+			height: 200px;
+			transform-style: preserve-3d;
+			position: relative;
+		}
+
+		.card:hover {
+			transform: rotateY(180deg);
+			transition: transform 0.5s;
+		}
+
+		.face {
+			border-radius: 20px;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			backface-visibility: hidden;
+		}
+
+		.face.front {
+			background: var(--primary);
+		}
+
+		.face.back {
+			background: hotpink;
+			transform: rotateX(180deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="card">
+		<div class="face front"></div>
+		<div class="face back"></div>
+	</div>
+</body>
+</html>
