@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Transition - Timing, Function and Delay</title>
+	<style>
+		:root {
+			--primary: #005C97;
+		}
+
+		.container:hover .circle{
+			transform:  translateX(200px);
+		}
+
+		.circle {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+		}
+
+		.one {
+			background: salmon;
+			transition: transform 1s linear;
+			transition-delay: 0.5s;
+		}
+
+		.two {
+			background: lightgreen;
+			transition: transform 1s ease;
+			transition-delay: 1s;
+		}
+
+		.three {
+			background: lightblue;
+			transition: transform 1s ease-in;
+			transition-delay: 1.5s;
+		}
+
+		.four {
+			background: lavender;
+			transition: transform 1s ease-out;
+			transition-delay: 2s;
+		}
+
+		.five {
+			background: lightslategray;
+			transition: transform 1s ease-in-out;
+			transition-delay: 2.5s;
+		}
+
+		.six {
+			background: lightskyblue;
+			transition: transform 1s cubic-bezier(0.51, .72, 0.91, .26);
+			transition-delay: 3s;
+		}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="circle one"></div>
+		<div class="circle two"></div>
+		<div class="circle three"></div>
+		<div class="circle four"></div>
+		<div class="circle five"></div>
+		<div class="circle six"></div>
+	</div>
+</body>
+</html>
