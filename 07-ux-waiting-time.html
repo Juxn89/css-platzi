@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UX Tips: Waiting Time</title>
+	<style>
+		:root {
+			--primary: #005C97;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.nav {
+			display: flex;
+			gap: 100px;
+		}
+
+		.nav li ul {
+			display: block;
+			opacity: 0;
+			position: absolute;
+			transition: opacity 400ms ease;
+			transition-delay: 400ms;
+		}
+
+		.nav li:hover > ul {
+			opacity: 1;
+			position: static;
+			transition: opacity 400ms ease;
+			transition-delay: 400ms;
+		}
+
+		.nav li ul li {
+			position: relative;
+			right: -20px;
+		}
+
+</style>
+</head>
+<body>
+	<ul class="nav">
+		<li>
+			<a href="#">Tip 1: Provide Feedback</a>
+			<ul>
+				<li><a href="#">Use loading spinners</a></li>
+				<li>
+					<a href="#">Display messages like "Loading..."</a>
+					<ul>
+						<li><a href="#">Keep users informed about progress</a></li>
+						<li><a href="#">Use friendly language</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Tip 2: Use Skeleton Screens</a>
+			<ul>
+				<li><a href="#">Implement placeholder content</a></li>
+				<li><a href="#">Use blurred images to indicate loading</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Tip 3: Show Progress Indicators</a>
+			<ul>
+				<li><a href="#">Use progress bars for long tasks</a></li>
+				<li><a href="#">Display estimated time remaining</a></li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>
