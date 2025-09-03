@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hardware acceleration and WillChange animations use</title>
+	<style>
+		:root {
+			--primary: #005C97;
+		}
+
+		button {
+			background-color: var(--primary);
+			width: 100px;
+			height: 30px;
+			color: #ffffff;
+		}
+
+		.better {
+			will-change: transform;
+			transition: transform 500ms ease;
+		}
+
+		.better:hover {
+			transform: translateY(5px);
+		}
+
+		.worst {
+			will-change: margin-top;
+			transition: margin-top 500ms ease;
+		}
+
+		.worst:hover {
+			margin-top: 5px;
+		}
+
+</style>
+</head>
+<body>
+	<div>
+		<button class="better">Submit</button>
+		<button class="worst">Cancel</button>
+	</div>
+</body>
+</html>
