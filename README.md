@@ -14,6 +14,11 @@
     flex-wrap: nowrap;
     text-align: center;
     width: 100%;
+    /* Ensure centering even if parent is not full width */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100vw;
   }
 </style>
 
@@ -27,6 +32,10 @@
   <li>
     <span class="branch-title">01-basic-css-grid</span> <span>🔲</span>
     <div class="desc">Master the fundamentals of <strong>CSS Grid</strong>—learn how to create modern, responsive layouts with ease.</div>
+  </li>
+  <li>
+    <span class="branch-title">02-transform-transition</span> <span>🎯</span>
+    <div class="desc">Explore <strong>CSS Transforms</strong> and <strong>Transitions</strong> to create smooth, interactive UI effects and animations.</div>
   </li>
   <!-- Add more branches here as you grow! -->
 </ul>
