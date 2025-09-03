@@ -1,11 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tranformations and Transitions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transforms & Transitions Directory</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:600,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #005C97;
+      --secondary: #363795;
+      --bg: #f7f9fb;
+      --card-bg: #fff;
+      --card-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      --radius: 18px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(120deg, var(--primary), var(--secondary));
+      min-height: 100vh;
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+      color: #fff;
+    }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        opacity: 0.95;
+      }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem 1rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+
+    .desc {
+      color: #f3f3f3;
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.18);
+    }
+
+    .card-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      padding: 1.2rem 1.5rem;
+      min-width: 240px;
+      flex: 1 1 260px;
+      transition: transform 0.18s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+      .card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+      }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+    }
+
+    .card-desc {
+      font-size: 0.97rem;
+      color: #555;
+      margin-bottom: 0.7rem;
+    }
+
+    .card-link {
+      margin-top: auto;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      padding: 0.5em 1.1em;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      display: inline-block;
+    }
+
+      .card-link:hover {
+        background: linear-gradient(90deg, var(--secondary), var(--primary));
+      }
+
+    @media (max-width: 700px) {
+      .card-list {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+  <header>
+    <h1>🎨 CSS Transforms & Transitions</h1>
+    <p>
+      Explore interactive examples and UX tips for modern web design.<br>
+      <span style="opacity:0.8;">Each section includes a description and direct links to hands-on demos.</span>
+    </p>
+  </header>
+  <main>
+    <section>
+      <div class="section-title">🧩 Core Concepts</div>
+      <div class="desc">Fundamental CSS features for interactive and dynamic web elements.</div>
+      <div class="card-list">
+        <div class="card">
+          <div class="card-title">01. Pseudo-classes <span>🔗</span></div>
+          <div class="card-desc">Style elements based on their state (hover, visited, etc.).</div>
+          <a class="card-link" href="01-pseudo-classes.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">02. Pseudo-elements <span>✨</span></div>
+          <div class="card-desc">Add special effects to selectors using pseudo-elements like <code>::before</code> and <code>::after</code>.</div>
+          <a class="card-link" href="02-pseudo-elements.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">03. 2D & 3D Transform <span>🌀</span></div>
+          <div class="card-desc">Move, rotate, scale, and skew elements in 2D and 3D space.</div>
+          <a class="card-link" href="03-transform-2d-3d.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">04. Backface Visibility <span>🃏</span></div>
+          <div class="card-desc">Control the visibility of the back face of transformed elements.</div>
+          <a class="card-link" href="04-transform-backface-visibility.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">04. Transform Origin <span>🎯</span></div>
+          <div class="card-desc">Set the origin point for transformations like rotate and scale.</div>
+          <a class="card-link" href="04-transform-origin.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">04. Rotate <span>🔄</span></div>
+          <div class="card-desc">Rotate elements around a fixed point.</div>
+          <a class="card-link" href="04-transform-rotate.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">04. Scale <span>📏</span></div>
+          <div class="card-desc">Resize elements using the <code>scale</code> transform.</div>
+          <a class="card-link" href="04-transform-scale.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">04. Skew <span>📐</span></div>
+          <div class="card-desc">Distort elements along the X and Y axes.</div>
+          <a class="card-link" href="04-transform-skew.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">04. Transform Style <span>🧬</span></div>
+          <div class="card-desc">Control how nested elements are rendered in 3D space.</div>
+          <a class="card-link" href="04-transform-style.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">05. Parallax <span>🌄</span></div>
+          <div class="card-desc">Create depth and movement effects with parallax scrolling.</div>
+          <a class="card-link" href="05-parallax.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">06. Transition Property & Duration <span>⏱️</span></div>
+          <div class="card-desc">Animate CSS property changes with <code>transition-property</code> and <code>transition-duration</code>.</div>
+          <a class="card-link" href="06-transition-property-duration.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">06. Timing Function & Delay <span>⏳</span></div>
+          <div class="card-desc">Control animation speed and delay with <code>transition-timing-function</code> and <code>transition-delay</code>.</div>
+          <a class="card-link" href="06-transition-timing-function-delay.html" target="_blank">View Demo</a>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="section-title">💡 UX Tips & Best Practices</div>
+      <div class="desc">Enhance user experience with smooth transitions, feedback, and movement.</div>
+      <div class="card-list">
+        <div class="card">
+          <div class="card-title">07. Blinking Issue <span>⚡</span></div>
+          <div class="card-desc">Resolve common blinking issues in UI transitions for a seamless experience.</div>
+          <a class="card-link" href="07-ux-blinking-issue.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">07. Movement Driven by Action <span>🏃‍♂️</span></div>
+          <div class="card-desc">Trigger movement and animation by user actions for a responsive UI.</div>
+          <a class="card-link" href="07-ux-moviment-driven-by-action.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">07. Waiting Time <span>⏳</span></div>
+          <div class="card-desc">Handle waiting times with feedback, skeleton screens, and progress indicators.</div>
+          <a class="card-link" href="07-ux-waiting-time.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">08. Will Change <span>🚀</span></div>
+          <div class="card-desc">Optimize animations and transitions using the <code>will-change</code> property.</div>
+          <a class="card-link" href="08-will-change.html" target="_blank">View Demo</a>
+        </div>
+        <div class="card">
+          <div class="card-title">09. Web Accessible Reduce Motion <span>♿</span></div>
+          <div class="card-desc">Make your animations accessible by respecting user preferences for reduced motion.</div>
+          <a class="card-link" href="09-web-accessible-reduce-motion.html" target="_blank">View Demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
