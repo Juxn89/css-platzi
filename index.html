@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Learning Demos</title>
+	<style>
+		:root {
+			--bg: #f8fafc;
+			--card-bg: #fff;
+			--primary: #2d3748;
+			--secondary: #64748b;
+			--border: #e2e8f0;
+			--radius: 1.2em;
+			--shadow: 0 2px 16px 0 rgba(60,72,88,0.08);
+		}
+
+		body {
+			background: var(--bg);
+			font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			color: var(--primary);
+			min-height: 100vh;
+		}
+
+		.header {
+			text-align: center;
+			padding: 2.5em 1em 1.5em 1em;
+		}
+
+			.header h1 {
+				font-size: 2.2em;
+				font-weight: 700;
+				margin: 0 0 0.2em 0;
+				letter-spacing: -1px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 0.5em;
+			}
+
+			.header p {
+				color: var(--secondary);
+				font-size: 1.1em;
+				margin: 0;
+			}
+
+		.cards {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 2em;
+			padding: 2em 1em;
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		.card {
+			background: var(--card-bg);
+			border: 1px solid var(--border);
+			border-radius: var(--radius);
+			box-shadow: var(--shadow);
+			padding: 2em 1.5em 1.5em 1.5em;
+			width: 290px;
+			transition: transform 0.15s, box-shadow 0.15s;
+			text-align: left;
+			display: flex;
+			flex-direction: column;
+			gap: 0.7em;
+		}
+
+			.card:hover {
+				transform: translateY(-6px) scale(1.025);
+				box-shadow: 0 6px 32px 0 rgba(60,72,88,0.13);
+				border-color: #cbd5e1;
+			}
+
+		.card-title {
+			font-size: 1.25em;
+			font-weight: 600;
+			color: var(--primary);
+			margin: 0;
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
+		}
+
+		.card-desc {
+			color: var(--secondary);
+			font-size: 1em;
+			margin: 0;
+		}
+
+		.card-link {
+			margin-top: auto;
+			text-decoration: none;
+			color: #2563eb;
+			font-weight: 500;
+			transition: color 0.15s;
+			display: inline-flex;
+			align-items: center;
+			gap: 0.3em;
+		}
+
+			.card-link:hover {
+				color: #1e40af;
+				text-decoration: underline;
+			}
+
+		@media (max-width: 700px) {
+			.cards {
+				flex-direction: column;
+				align-items: center;
+				gap: 1.2em;
+			}
+
+			.card {
+				width: 95vw;
+				max-width: 340px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>
+			<span>✨</span> CSS Learning Demos
+		</h1>
+		<p>
+			Explore practical CSS concepts through interactive examples.<br>
+			Minimal, modern, and hands-on.
+		</p>
+	</div>
+	<div class="cards">
+		<div class="card">
+			<div class="card-title">🔢 <a class="card-link" href="01-counter.html">Counter with CSS</a></div>
+			<div class="card-desc">A simple, interactive counter built using only CSS techniques.</div>
+		</div>
+		<div class="card">
+			<div class="card-title">🗂️ <a class="card-link" href="02-stacking-context.html">Stacking Context</a></div>
+			<div class="card-desc">Visualize and understand <b>z-index</b> and stacking context in CSS layouts.</div>
+		</div>
+		<div class="card">
+			<div class="card-title">🎬 <a class="card-link" href="03-animations.html">Animations with Keyframes</a></div>
+			<div class="card-desc">Discover CSS animations using <b>@keyframes</b> and animation properties.</div>
+		</div>
+	</div>
+</body>
+</html>

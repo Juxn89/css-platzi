@@ -1,61 +1,110 @@
-﻿<!-- Minimalist CSS for GitHub rendering -->
+<!-- Minimalist CSS for GitHub rendering -->
 <style>
-  .branch-list { list-style: none; padding: 0; }
-  .branch-list li { margin-bottom: 0.5em; }
-  .branch-title { font-weight: bold; color: #2d3748; }
-  .desc { color: #586069; }
-  .signature {
-    margin-top: 2em;
-    font-size: 1.1em;
+  .main-title {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    flex-wrap: nowrap;
+    gap: 0.6em;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+  }
+  .branch-list, .topics-list, .links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 0 1.2em 0;
+  }
+  .branch-list li, .topics-list li, .links-list li {
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+  }
+  .branch-title {
+    font-weight: bold;
+    color: #2d3748;
+  }
+  .desc {
+    color: #586069;
+    font-size: 0.98em;
+  }
+  .signature {
+    margin-top: 2.5em;
+    font-size: 1.1em;
+    display: block;
     text-align: center;
     width: 100%;
-    /* Ensure centering even if parent is not full width */
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 100vw;
+    font-family: inherit;
   }
 </style>
 
-# <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="32" alt="CSS Logo" /> CSS from scratch
+<div class="main-title">
+  <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="36" alt="CSS Logo" />
+  CSS from Scratch
+</div>
 
-> **A curated collection of CSS learning paths from Platzi, organized by branch for modular, clean, and practical code examples.** 🚀
+<div class="desc">
+  A modern, modular, and practical repository for mastering CSS—featuring curated learning paths, hands-on examples, and essential animation principles. 🚀
+</div>
 
-## 📚 Branches Overview
+## 📦 Repository Structure
 
 <ul class="branch-list">
   <li>
-    <span class="branch-title">01-basic-css-grid</span> <span>🔲</span>
-    <div class="desc">Master the fundamentals of <strong>CSS Grid</strong>—learn how to create modern, responsive layouts with ease.</div>
+    <span class="branch-title">01-counter.html</span> <span>🔢</span>
+    <span class="desc">A simple counter built with CSS.</span>
   </li>
   <li>
-    <span class="branch-title">02-transform-transition</span> <span>🎯</span>
-    <div class="desc">Explore <strong>CSS Transforms</strong> and <strong>Transitions</strong> to create smooth, interactive UI effects and animations.</div>
+    <span class="branch-title">02-stacking-context.html</span> <span>🗂️</span>
+    <span class="desc">Demonstrates <strong>z-index</strong> and stacking context in CSS.</span>
   </li>
-  <!-- Add more branches here as you grow! -->
 </ul>
 
-## ✨ Why this repository?
+## 🎨 Key Animation Principles
 
-- 📦 Each branch = a complete Platzi CSS course.
-- 🧩 Modular, easy-to-navigate code.
-- 📝 Perfect for tracking progress and revisiting concepts.
+<ul class="topics-list">
+  <li>Squash &amp; Stretch</li>
+  <li>Anticipation</li>
+  <li>Staging</li>
+  <li>Straight-Ahead Action &amp; Pose-to-Pose</li>
+  <li>Follow Through &amp; Overlapping Action</li>
+  <li>Slow In &amp; Slow Out</li>
+  <li>Arc</li>
+  <li>Secondary Action</li>
+  <li>Timing</li>
+  <li>Exaggeration</li>
+  <li>Solid Drawing</li>
+  <li>Appeal</li>
+</ul>
 
-## 🚀 Getting Started
+## 📚 Useful Resources
 
-1. Clone the repository.
-2. Switch to the branch of the course you want to explore:
-3. Dive into the code and start learning!
+<ul class="links-list">
+  <li>
+    <a href="https://cssanimation.rocks/principles/" target="_blank">CSS Animation Principles</a> — Overview of core animation concepts in CSS.
+  </li>
+  <li>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">MDN: CSS Animations</a> — Official documentation for CSS animation properties and usage.
+  </li>
+  <li>
+    <a href="https://dev.to/cchana/explained-creating-a-zigzag-pattern-with-just-css-13g1" target="_blank">Zigzag Pattern with CSS</a> — Guide to creating patterns using only CSS.
+  </li>
+  <li>
+    <a href="https://www.magicpattern.design/tools/css-backgrounds" target="_blank">MagicPattern: CSS Backgrounds</a> — Tool for generating creative CSS backgrounds.
+  </li>
+  <li>
+    <a href="https://css-tricks.com/a-few-background-patterns-sites/" target="_blank">CSS-Tricks: Background Patterns</a> — Collection of sites for CSS background patterns.
+  </li>
+  <li>
+    <a href="https://web.dev/lcp/" target="_blank">web.dev: Largest Contentful Paint (LCP)</a> — Learn about LCP and web performance.
+  </li>
+  <li>
+    <a href="https://web.dev/cls/" target="_blank">web.dev: Cumulative Layout Shift (CLS)</a> — Guide to minimizing layout shifts for better UX.
+  </li>
+  <li>
+    <a href="https://csstriggers.com/" target="_blank">CSS Triggers</a> — Reference for CSS property performance and browser triggers.
+  </li>
+</ul>
 
----
-
-<div class="signature">
-  With <span title="love">❤️</span> &amp; <span title="coffee">☕</span> from
+<div class="signature" style="text-align: center;">
+  Made with <span title="love">❤️</span> &amp; <span title="coffee">☕</span> from
   <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg" alt="Nicaragua Flag" style="height:1em;width:1.5em;vertical-align:middle;margin:0 0.2em;" />
-  <strong>Juan Gómez</strong>
+  Juan Gómez
 </div>
