@@ -19,6 +19,7 @@
 
   body {
     display: grid;
+		counter-reset: score;
     height: 100vh;
     margin: 0;
     place-items: center;
@@ -150,6 +151,19 @@
     z-index: 2;
   }
 
+	input[type=checkbox]:focus {
+		appearance: none;
+		outline: none;
+	}
+
+	input:checked {
+		counter-increment: score;
+	}
+
+	.score::after {
+		content: counter(score);
+	}
+
   @keyframes bunny {
     0% {
       top: 0;
@@ -200,7 +214,10 @@
   }
 
   .layer-1 input[type=checkbox] {
-
+		animation-name: bunny;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
   }
 
   .layer-2 {
