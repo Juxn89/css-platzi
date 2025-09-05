@@ -1,4 +1,4 @@
-﻿<!-- Minimalist CSS for GitHub rendering -->
+<!-- Minimalist CSS for GitHub rendering -->
 <style>
   .branch-list { list-style: none; padding: 0; }
   .branch-list li { margin-bottom: 0.5em; }
@@ -37,6 +37,10 @@
     <span class="branch-title">02-transform-transition</span> <span>🎯</span>
     <div class="desc">Explore <strong>CSS Transforms</strong> and <strong>Transitions</strong> to create smooth, interactive UI effects and animations.</div>
   </li>
+  <li>
+    <span class="branch-title">03-animations</span> <span>🎬</span>
+    <div class="desc">Dive into <strong>CSS Animations</strong>—learn to bring your interfaces to life with keyframes, timing functions, and creative motion effects.</div>
+  </li>
   <!-- Add more branches here as you grow! -->
 </ul>
 
@@ -54,8 +58,8 @@
 
 ---
 
-<div class="signature">
-  With <span title="love">❤️</span> &amp; <span title="coffee">☕</span> from
+<div class="signature" style="text-align: center;">
+  Made with <span title="love">❤️</span> and <span title="coffee">☕</span>, from
   <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg" alt="Nicaragua Flag" style="height:1em;width:1.5em;vertical-align:middle;margin:0 0.2em;" />
-  <strong>Juan Gómez</strong>
+  Nicaragua, <strong>Juan Gómez</strong>
 </div>
