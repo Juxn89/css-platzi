@@ -86,17 +86,21 @@
     width: 4px;
 
     animation-name: blink;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
   }
 
   @keyframes blink {
     0% {
-
+			height: 4px;
     }
     5% {
-      
+      height: 1px;
+			transform: translate(0px, 2px);
     }
     10% {
-      
+      height: 4px;
+			transform: translate(0px, 0px);
     }
   }
 
