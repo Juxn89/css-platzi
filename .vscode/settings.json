@@ -1,4 +1,7 @@
 {
 	"explorer.compactFolders": false,
-	"explorer.autoReveal": true
+	"explorer.autoReveal": true,
+	"files.associations": {
+		"*.css": "css"
+	}
 }
