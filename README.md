@@ -20,46 +20,76 @@
     transform: translateX(-50%);
     max-width: 100vw;
   }
+  <!--
+  Modern, professional, and minimalistic README for GitHub.
+  Uses HTML and CSS for enhanced styling, but remains compatible with GitHub's rendering.
+  Topics are based on notes.txt.
+-->
+
+<style>
+  .main-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.2em;
+    color: #22223b;
+    text-align: left;
+  }
+  .subtitle {
+    font-size: 1.2em;
+    color: #4a4e69;
+    margin-bottom: 1.5em;
+    font-weight: 400;
+  }
+  .topics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2em 0;
+  }
+  .topics-list li {
+    background: #f2e9e4;
+    margin-bottom: 0.7em;
+    padding: 0.9em 1.2em;
+    border-radius: 0.7em;
+    font-size: 1.08em;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    box-shadow: 0 1px 4px #e0e0e0;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5em;
+    font-size: 1.1em;
+    color: #22223b;
+    font-weight: 500;
+    gap: 0.5em;
+  }
+  @media (max-width: 600px) {
+    .main-title { font-size: 1.4em; }
+    .topics-list li { font-size: 1em; }
+    .footer { font-size: 1em; }
+  }
 </style>
 
-# <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="32" alt="CSS Logo" /> CSS from scratch
+<div class="main-title">CSS Animations &amp; UI Interactions 🚀</div>
+<div class="subtitle">
+  A modern and minimalistic repository focused on advanced CSS techniques and pure web interactions.
+</div>
 
-> **A curated collection of CSS learning paths from Platzi, organized by branch for modular, clean, and practical code examples.** 🚀
-
-## 📚 Branches Overview
-
-<ul class="branch-list">
-  <li>
-    <span class="branch-title">01-basic-css-grid</span> <span>🔲</span>
-    <div class="desc">Master the fundamentals of <strong>CSS Grid</strong>—learn how to create modern, responsive layouts with ease.</div>
-  </li>
-  <li>
-    <span class="branch-title">02-transform-transition</span> <span>🎯</span>
-    <div class="desc">Explore <strong>CSS Transforms</strong> and <strong>Transitions</strong> to create smooth, interactive UI effects and animations.</div>
-  </li>
-  <li>
-    <span class="branch-title">03-animations</span> <span>🎬</span>
-    <div class="desc">Dive into <strong>CSS Animations</strong>—learn to bring your interfaces to life with keyframes, timing functions, and creative motion effects.</div>
-  </li>
-  <!-- Add more branches here as you grow! -->
+<ul class="topics-list">
+  <li>✨ <strong>Animations, Transitions, and Transformations</strong> with CSS</li>
+  <li>🧩 <strong>Modals</strong> using pure CSS, JavaScript, and HTML</li>
 </ul>
 
-## ✨ Why this repository?
-
-- 📦 Each branch = a complete Platzi CSS course.
-- 🧩 Modular, easy-to-navigate code.
-- 📝 Perfect for tracking progress and revisiting concepts.
-
-## 🚀 Getting Started
-
-1. Clone the repository.
-2. Switch to the branch of the course you want to explore:
-3. Dive into the code and start learning!
-
----
-
-<div class="signature" style="text-align: center;">
-  Made with <span title="love">❤️</span> and <span title="coffee">☕</span>, from
-  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg" alt="Nicaragua Flag" style="height:1em;width:1.5em;vertical-align:middle;margin:0 0.2em;" />
-  Nicaragua, <strong>Juan Gómez</strong>
+<div class="footer">
+  Made with
+  <span title="heart">❤️</span>
+  and
+  <span title="coffee">☕</span>
+  from
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg" alt="Nicaragua Flag" height="18" style="vertical-align:middle; margin:0 0.2em;">
+  Juan Gómez
 </div>
