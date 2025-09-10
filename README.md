@@ -1,27 +1,3 @@
-<!-- Minimalist CSS for GitHub rendering -->
-<style>
-  .branch-list { list-style: none; padding: 0; }
-  .branch-list li { margin-bottom: 0.5em; }
-  .branch-title { font-weight: bold; color: #2d3748; }
-  .desc { color: #586069; }
-  .signature {
-    margin-top: 2em;
-    font-size: 1.1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    flex-wrap: nowrap;
-    text-align: center;
-    width: 100%;
-    /* Ensure centering even if parent is not full width */
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 100vw;
-  }
-</style>
-
 # <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="32" alt="CSS Logo" /> CSS from scratch
 
 > **A curated collection of CSS learning paths from Platzi, organized by branch for modular, clean, and practical code examples.** 🚀
