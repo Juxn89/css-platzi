@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pseudo-class :has()</title>
+	<link rel="stylesheet" href="../style/01.pseudoclass-has.css">
+</head>
+<body>
+	<div>
+		<p>This DIV has a paragraph.</p>
+	</div>
+
+	<div>
+		This DIV does not have a paragraph.
+	</div>
+
+	<div>
+		<label>
+			<input type="checkbox">
+			Click me!
+		</label>
+	</div>
+
+	<div>
+		<table border="1">
+			<tr>
+				<th>Name</th>
+				<th>Lastname</th>
+			</tr>
+			<tr>
+				<td>John</td>
+				<td>Doe</td>
+		</table>
+
+		<p>This table has data</p>
+
+		<table border="1"></table>
+
+		<p>This table does not have data</p>
+	</div>
+</body>
+</html>
