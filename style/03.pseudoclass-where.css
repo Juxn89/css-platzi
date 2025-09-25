@@ -1,0 +1,15 @@
+/* :is(.prominent) {
+	color: darkblue;
+	text-transform: uppercase;
+	text-align: center;
+} */
+
+:where(.prominent) {
+	color: darkgreen;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.prominent {
+	color: red;
+}
