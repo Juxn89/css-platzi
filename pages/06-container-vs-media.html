@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Media queries vs Container queries</title>
+	<style>
+		.card {
+			border: 2px solid black;
+			padding: 20px;
+			font-size: 16px;
+			width: 100%;
+			max-width: 600px;
+		}
+
+		.container {
+			container-type: inline-size;
+			width: 100%;
+			max-width: 900px;
+			border: 1px solid red;
+			padding: 10px;
+		}
+
+		@media (max-width: 600px) { 
+			.card {
+				background-color: lightseagreen;
+			}
+		}
+
+		@container (max-width: 400px) { 
+			.card {
+				background-color: lightcoral;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Media queries vs Container queries</h1>
+	<h3>Media queries (dependent on viewport)</h3>
+	<div class="card">
+		This card will change its background color based on the viewport size; if the viewport is wider than 600px.
+	</div>
+
+	<h3>Container queries (dependent on container size)</h3>
+	<div class="container">
+		<div class="card">
+			This card will change its background color based on the container size; if the container is wider than 400px.
+		</div>
+	</div>
+</body>
+</html>

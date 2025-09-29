@@ -1,0 +1,9 @@
+div.example-1 p:nth-child(2n) {
+	color: blueviolet;
+	font-style: italic;
+}
+
+div.example-2 p:nth-child(2n of p) {
+	color: blueviolet;
+	font-style: italic;
+}
