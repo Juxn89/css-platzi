@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Advanced CSS Properties</title>
+	<style>
+		@property --background-color {
+			syntax: "<color>";
+			inherits: false;
+			initial-value: white;
+		}
+
+		body {
+			background-color: var(--background-color);
+			transition: --background-color 2s ease-in-out;
+		}
+
+		body:hover {
+			--background-color: teal;
+		}
+	</style>
+</head>
+<body>
+	<h1>Advanced CSS Properties</h1>
+	<p>This document demonstrates the use of custom properties in CSS.</p>
+	<p>Custom properties, also known as CSS variables, allow you to store values that can be reused throughout your stylesheet.</p>
+	<p>In this example, we define a custom property for the background color and change it on hover.</p>
+	<p>By using the <code>@property</code> rule, we can create a custom property with specific syntax, inheritance, and initial values.</p>
+	<p>This allows for more control and flexibility in styling elements.</p>
+	<p>For example, we can easily change the background color across multiple elements by updating the custom property.</p>
+	<p>Custom properties can also be used in conjunction with JavaScript to create dynamic styles.</p>
+</body>
+</html>
