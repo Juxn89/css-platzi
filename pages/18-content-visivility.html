@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Advanced CSS - Content Visibility</title>
+	<style>
+		.item {
+			padding: 20px;
+			margin: 10px 0;
+			border: solid 1px black;
+			font-size: 1.2rem;
+			background-color: aqua;
+		}
+
+		.optimized {
+			content-visibility: auto;
+			contain-intrinsic-size: 50px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Content Visibility</h1>
+	<h2>In this example, we will explore the content visibility property in CSS.</h2>
+	
+	<div class="item">Element without optimization</div>
+	<div class="item">Element without optimization</div>
+	<div class="item">Element without optimization</div>
+	<div class="item">Element without optimization</div>
+	<div class="item">Element without optimization</div>
+	<div class="item">Element without optimization</div>
+	<div class="item">Element without optimization</div>
+	<div class="item">Element without optimization</div>
+	<div class="item">Element without optimization</div>
+	<div class="item">Element without optimization</div>
+	<div class="item">Element without optimization</div>
+
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+	<div class="item optimized">This element was optimized using the content visibility property.</div>
+</body>
+</html>
