@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Advanced CSS - Mix Blend Mode</title>
+	<style>
+		body {
+			background: url('https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg') center/cover;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.card {
+			width: 300px;
+			padding: 20px;
+			font-size: 1.2rem;
+			text-align: center;
+			border-radius: 15px;
+			color: white;
+			background: rgb(255, 255, 255, 0.2);
+
+			backdrop-filter: blur(10px);
+		}
+
+		.plus-lighter {
+			color: black;
+			mix-blend-mode: plus-lighter;
+		}
+
+		.color-burn {
+			background-color: cyan;
+			mix-blend-mode: color-burn;
+		}
+	</style>
+</head>
+<body>
+	<div class="card plus-lighter">
+		<p>This is a paragraph with a backdrop filter.</p>
+	</div>
+
+	<div class="card color-burn">
+		<p>This is a paragraph with a backdrop filter.</p>
+	</div>
+</body>
+</html>
