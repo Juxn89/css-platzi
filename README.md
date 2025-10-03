@@ -1,45 +1,127 @@
-# <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="32" alt="CSS Logo" /> CSS from scratch
+# <div align="center"><img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="45" alt="CSS Logo" /> **Advanced CSS Learning Hub**</div>
 
-> **A curated collection of CSS learning paths from Platzi, organized by branch for modular, clean, and practical code examples.** 🚀
+<div align="center">
+  
+**A comprehensive collection of modern CSS techniques, real-world projects, and interactive examples from Platzi courses** 🚀
 
-## 📚 Branches Overview
+[![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
+[![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
+[![Responsive](https://img.shields.io/badge/Responsive-4CAF50?style=for-the-badge&logo=responsive&logoColor=white)]()
 
-<ul style="list-style: none; padding: 0;">
-  <li style="margin-bottom: 0.5em;">
-    <span style="font-weight: bold; color: #2d3748;">01-basic-css-grid</span> <span>🔲</span>
-    <div style="color: #586069;">Master the fundamentals of <strong>CSS Grid</strong>—learn how to create modern, responsive layouts with ease.</div>
-  </li>
-  <li style="margin-bottom: 0.5em;">
-    <span style="font-weight: bold; color: #2d3748;">02-transform-transition</span> <span>🎯</span>
-    <div style="color: #586069;">Explore <strong>CSS Transforms</strong> and <strong>Transitions</strong> to create smooth, interactive UI effects and animations.</div>
-  </li>
-  <li style="margin-bottom: 0.5em;">
-    <span style="font-weight: bold; color: #2d3748;">03-animations</span> <span>🎬</span>
-    <div style="color: #586069;">Dive into <strong>CSS Animations</strong>—learn to bring your interfaces to life with keyframes, timing functions, and creative motion effects.</div>
-  </li>
-  <li style="margin-bottom: 0.5em;">
-    <span style="font-weight: bold; color: #2d3748;">04-layout-animations</span> <span>🧱</span>
-    <div style="color: #586069;">Build a <strong>Lego-themed site</strong> featuring advanced <strong>CSS animations</strong>, <strong>transitions</strong>, and <strong>transformations</strong>. Includes a modal window implemented with HTML, CSS, and native JavaScript for interactive UI experiences.</div>
-  </li>
-  <!-- Add more branches here as you grow! -->
-</ul>
+</div>
 
-## ✨ Why this repository?
+## 🎯 **Learning Modules Overview**
 
-- 📦 Each branch = a complete Platzi CSS course.
-- 🧩 Modular, easy-to-navigate code.
-- 📝 Perfect for tracking progress and revisiting concepts.
+<table>
+<tr>
+<td width="50%">
 
-## 🚀 Getting Started
+### 💼 **Portfolio & Real Projects**
+- **[Portfolio Landing Page](pages/landing.html)** - Complete responsive portfolio showcasing CSS Grid, Flexbox, and modern layout techniques for real-world applications
+  
+*Topics: CSS Grid, Flexbox, Responsive Design, Portfolio Development*
 
-1. Clone the repository.
-2. Switch to the branch of the course you want to explore:
-3. Dive into the code and start learning!
+</td>
+<td width="50%">
+
+### 🎨 **CSS Fundamentals & Techniques**
+- **[CSS Custom Properties](pages/09-variables-css.html)** - Master CSS variables for maintainable, scalable stylesheets and dynamic theming systems
+- **[CSS Target Selector](pages/20-target.html)** - Create interactive elements without JavaScript using :target pseudo-class for tabs, accordions, and modals
+
+*Topics: CSS Variables, :root, Dynamic Styling, Pseudo-classes, Interactive Design*
+
+</td>
+</tr>
+</table>
+
+## 📚 **Course Branches Structure**
+
+Each branch represents a complete Platzi CSS course module with practical examples:
+
+<details>
+<summary><strong>🔲 01-basic-css-grid</strong> - CSS Grid Fundamentals</summary>
+
+Master the fundamentals of **CSS Grid Layout** system. Learn to create modern, responsive layouts with ease and precision.
+- Grid containers and items
+- Grid template areas
+- Responsive grid designs
+- Practical layout examples
+
+</details>
+
+<details>
+<summary><strong>🎯 02-transform-transition</strong> - CSS Transforms & Transitions</summary>
+
+Explore **CSS Transforms** and **Transitions** to create smooth, interactive UI effects and engaging user experiences.
+- 2D and 3D transformations
+- Smooth transition effects
+- Hover animations
+- Performance optimization
+
+</details>
+
+<details>
+<summary><strong>🎬 03-animations</strong> - CSS Animations</summary>
+
+Dive into **CSS Animations** and learn to bring interfaces to life with keyframes, timing functions, and creative motion effects.
+- Keyframe animations
+- Animation properties
+- Timing functions
+- Complex animation sequences
+
+</details>
+
+<details>
+<summary><strong>🧱 04-layout-animations</strong> - Advanced Lego-themed Project</summary>
+
+Build a **Lego-themed interactive site** featuring advanced CSS animations, transitions, and transformations with modal functionality.
+- Advanced animations
+- Interactive modal windows
+- HTML/CSS/JavaScript integration
+- Real-world project implementation
+
+</details>
+
+<details>
+<summary><strong>🚀 06-advanced-css-responsive</strong> - Advanced Responsive Design</summary>
+
+Advanced responsive design techniques with modern CSS features, custom properties, and interactive elements.
+- Advanced responsive patterns
+- CSS custom properties
+- Modern layout techniques
+- Interactive components
+
+</details>
+
+## ✨ **Why This Repository?**
+
+<div align="center">
+
+| 🎓 **Structured Learning** | 🧩 **Modular Code** | 📊 **Progress Tracking** | 🌟 **Real Projects** |
+|:-:|:-:|:-:|:-:|
+| Each branch = Complete course | Easy navigation & organization | Track your CSS mastery journey | Portfolio-ready examples |
+
+</div>
+
+## 🚀 **Getting Started**
+
+### 💡 **Quick Access**
+- **Main Hub**: Open `index.html` for organized access to all examples
+- **Direct Access**: Navigate to `pages/` folder for individual examples  
+- **Branch Switching**: Each branch contains complete course materials
+
+## 🛠️ **Technologies & Techniques**
+
+<div align="center">
+
+**Core Technologies:** HTML5 • CSS3 • Vanilla JavaScript  
+**CSS Features:** Grid Layout • Flexbox • Custom Properties • Animations • Transforms • Responsive Design  
+**Design Patterns:** Mobile-First • Progressive Enhancement • Modern UI/UX  
+
+</div>
 
 ---
 
-<div style="margin-top: 2em; font-size: 1.1em; display: flex; align-items: center; justify-content: center; gap: 0.5em; flex-wrap: nowrap; text-align: center; width: 100%; position: relative; left: 50%; transform: translateX(-50%); max-width: 100vw;">
-  Made with <span title="love">❤️</span> and <span title="coffee">☕</span>, from
-  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg" alt="Nicaragua Flag" style="height:1em;width:1.5em;vertical-align:middle;margin:0 0.2em;" />
-  Nicaragua, <strong>Juan Gómez</strong>
+<div align="center" style="margin-top: 2rem;">
+  <strong>Made with ❤️ and ☕ from <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg" alt="Nicaragua Flag" width="20" height="14" style="vertical-align: middle;" /> Nicaragua, Juan Gómez</strong>
 </div>

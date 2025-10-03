@@ -3,9 +3,908 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>🎨 Advanced CSS Learning Hub - Platzi Course</title>
+	<style>
+		:root {
+			--primary-color: #6366f1;
+			--secondary-color: #8b5cf6;
+			--accent-color: #f59e0b;
+			--dark-bg: #1e293b;
+			--card-bg: #ffffff;
+			--text-primary: #1e293b;
+			--text-secondary: #64748b;
+			--shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			--shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+			--shadow-heavy: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+			--gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+			--gradient-accent: linear-gradient(135deg, var(--accent-color), #ef4444);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Inter', system-ui, -apple-system, sans-serif;
+			line-height: 1.6;
+			color: var(--text-primary);
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			min-height: 100vh;
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 2rem;
+		}
+
+		.header {
+			text-align: center;
+			margin-bottom: 4rem;
+			animation: fadeInDown 1s ease-out;
+		}
+
+		.main-title {
+			font-size: 3.5rem;
+			font-weight: 800;
+			background: linear-gradient(135deg, #ffffff, #f1f5f9);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			margin-bottom: 1rem;
+			text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		}
+
+		.subtitle {
+			font-size: 1.25rem;
+			color: #e2e8f0;
+			font-weight: 400;
+			margin-bottom: 2rem;
+		}
+
+		.intro-card {
+			background: rgba(255, 255, 255, 0.95);
+			backdrop-filter: blur(10px);
+			border-radius: 20px;
+			padding: 2rem;
+			box-shadow: var(--shadow-heavy);
+			margin-bottom: 3rem;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+		}
+
+		.section {
+			margin-bottom: 3rem;
+		}
+
+		.section-title {
+			font-size: 2rem;
+			font-weight: 700;
+			color: var(--text-primary);
+			margin-bottom: 1.5rem;
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+		}
+
+		.section-emoji {
+			font-size: 2.5rem;
+		}
+
+		.cards-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 2rem;
+			margin-top: 2rem;
+		}
+
+		.page-card {
+			background: var(--card-bg);
+			border-radius: 16px;
+			padding: 2rem;
+			box-shadow: var(--shadow-medium);
+			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			border: 1px solid rgba(226, 232, 240, 0.8);
+			position: relative;
+			overflow: hidden;
+		}
+
+			.page-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 4px;
+				background: var(--gradient-primary);
+			}
+
+			.page-card:hover {
+				transform: translateY(-8px);
+				box-shadow: var(--shadow-heavy);
+				border-color: var(--primary-color);
+			}
+
+		.card-header {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		.card-emoji {
+			font-size: 2.5rem;
+			animation: bounce 2s infinite;
+		}
+
+		.card-title {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: var(--text-primary);
+			margin: 0;
+		}
+
+		.card-description {
+			color: var(--text-secondary);
+			margin-bottom: 1.5rem;
+			line-height: 1.6;
+		}
+
+		.card-tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.tag {
+			background: var(--gradient-primary);
+			color: white;
+			padding: 0.25rem 0.75rem;
+			border-radius: 50px;
+			font-size: 0.875rem;
+			font-weight: 500;
+		}
+
+		.card-link {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			background: var(--gradient-primary);
+			color: white;
+			text-decoration: none;
+			padding: 0.75rem 1.5rem;
+			border-radius: 10px;
+			font-weight: 600;
+			transition: all 0.3s ease;
+			box-shadow: var(--shadow-light);
+		}
+
+			.card-link:hover {
+				transform: translateY(-2px);
+				box-shadow: var(--shadow-medium);
+			}
+
+		.footer {
+			text-align: center;
+			margin-top: 4rem;
+			padding: 2rem;
+			background: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(10px);
+			border-radius: 16px;
+			color: white;
+		}
+
+		.stats {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			gap: 1rem;
+			margin: 2rem 0;
+		}
+
+		.stat-card {
+			background: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(10px);
+			border-radius: 12px;
+			padding: 1.5rem;
+			text-align: center;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+		}
+
+		.stat-number {
+			font-size: 2rem;
+			font-weight: 800;
+			color: var(--accent-color);
+		}
+
+		.stat-label {
+			color: #e2e8f0;
+			font-size: 0.875rem;
+			margin-top: 0.25rem;
+		}
+
+		@keyframes fadeInDown {
+			from {
+				opacity: 0;
+				transform: translateY(-30px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		@keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {
+				transform: translateY(0);
+			}
+
+			40% {
+				transform: translateY(-10px);
+			}
+
+			60% {
+				transform: translateY(-5px);
+			}
+		}
+
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.page-card {
+			animation: fadeInUp 0.6s ease-out;
+			animation-fill-mode: both;
+		}
+
+			.page-card:nth-child(1) {
+				animation-delay: 0.1s;
+			}
+
+			.page-card:nth-child(2) {
+				animation-delay: 0.2s;
+			}
+
+			.page-card:nth-child(3) {
+				animation-delay: 0.3s;
+			}
+
+			.page-card:nth-child(4) {
+				animation-delay: 0.4s;
+			}
+
+		@media (max-width: 768px) {
+			.main-title {
+				font-size: 2.5rem;
+			}
+
+			.container {
+				padding: 1rem;
+			}
+
+			.cards-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.stats {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		.special-card {
+			background: var(--gradient-accent);
+			color: white;
+		}
+
+			.special-card .card-title,
+			.special-card .card-description {
+				color: white;
+			}
+
+			.special-card .card-link {
+				background: rgba(255, 255, 255, 0.2);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.3);
+			}
+
+				.special-card .card-link:hover {
+					background: rgba(255, 255, 255, 0.3);
+				}
+	</style>
 </head>
 <body>
-	
+	<div class="container">
+		<header class="header">
+			<h1 class="main-title">🎨 Advanced CSS Learning Hub</h1>
+			<p class="subtitle">Master modern CSS techniques with interactive examples and real-world projects</p>
+
+			<div class="intro-card">
+				<p>
+					Welcome to your comprehensive CSS learning journey! 🚀 This collection features practical examples,
+					advanced techniques, and real-world projects to help you master modern CSS development.
+				</p>
+
+				<div class="stats">
+					<div class="stat-card">
+						<div class="stat-number">23+</div>
+						<div class="stat-label">Learning Examples</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-number">100%</div>
+						<div class="stat-label">Interactive</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-number">∞</div>
+						<div class="stat-label">Possibilities</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!-- Portfolio & Real Projects Section -->
+			<section class="section">
+				<h2 class="section-title">
+					<span class="section-emoji">💼</span>
+					Portfolio & Real Projects
+				</h2>
+				<div class="cards-grid">
+					<div class="page-card special-card">
+						<div class="card-header">
+							<span class="card-emoji">🌟</span>
+							<h3 class="card-title">Portfolio Landing Page</h3>
+						</div>
+						<p class="card-description">
+							A complete, responsive portfolio website showcasing advanced CSS Grid, Flexbox,
+							and modern layout techniques. Perfect example of real-world application!
+						</p>
+						<div class="card-tags">
+							<span class="tag">CSS Grid</span>
+							<span class="tag">Flexbox</span>
+							<span class="tag">Responsive</span>
+							<span class="tag">Portfolio</span>
+						</div>
+						<a href="pages/landing.html" class="card-link">
+							<span>View Portfolio</span>
+							<span>→</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Advanced Pseudo-classes Section -->
+			<section class="section">
+				<h2 class="section-title">
+					<span class="section-emoji">🎯</span>
+					Advanced Pseudo-classes
+				</h2>
+				<div class="cards-grid">
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🔍</span>
+							<h3 class="card-title">:has() Pseudo-class</h3>
+						</div>
+						<p class="card-description">
+							Learn the powerful :has() selector to style elements based on their children.
+							Create dynamic styles that respond to content structure.
+						</p>
+						<div class="card-tags">
+							<span class="tag">:has()</span>
+							<span class="tag">Parent Selection</span>
+							<span class="tag">Dynamic Styling</span>
+						</div>
+						<a href="pages/01-pseudoclass-has.html" class="card-link">
+							<span>Explore :has()</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🎪</span>
+							<h3 class="card-title">:is() & :where() Selectors</h3>
+						</div>
+						<p class="card-description">
+							Master efficient selector grouping with :is() and learn specificity control with :where().
+							Write cleaner, more maintainable CSS code.
+						</p>
+						<div class="card-tags">
+							<span class="tag">:is()</span>
+							<span class="tag">:where()</span>
+							<span class="tag">Selector Grouping</span>
+						</div>
+						<a href="pages/02-pseudoclass-is.html" class="card-link">
+							<span>Learn :is()</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🚫</span>
+							<h3 class="card-title">:not() Pseudo-class</h3>
+						</div>
+						<p class="card-description">
+							Discover the :not() selector for excluding elements from styling rules.
+							Perfect for creating exceptions in your CSS patterns.
+						</p>
+						<div class="card-tags">
+							<span class="tag">:not()</span>
+							<span class="tag">Exclusion</span>
+							<span class="tag">Conditional Styling</span>
+						</div>
+						<a href="pages/04-pseudoclass-not.html" class="card-link">
+							<span>Master :not()</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🔢</span>
+							<h3 class="card-title">:nth-child() Patterns</h3>
+						</div>
+						<p class="card-description">
+							Create complex selection patterns with :nth-child(). Build zebra stripes,
+							grids, and advanced layout patterns with mathematical selectors.
+						</p>
+						<div class="card-tags">
+							<span class="tag">:nth-child()</span>
+							<span class="tag">Mathematical Selectors</span>
+							<span class="tag">Pattern Matching</span>
+						</div>
+						<a href="pages/05-pseudoclass-nth-child.html" class="card-link">
+							<span>Explore Patterns</span>
+							<span>→</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Container Queries & Responsive Design Section -->
+			<section class="section">
+				<h2 class="section-title">
+					<span class="section-emoji">📱</span>
+					Container Queries & Responsive Design
+				</h2>
+				<div class="cards-grid">
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">📏</span>
+							<h3 class="card-title">Container vs Media Queries</h3>
+						</div>
+						<p class="card-description">
+							Compare traditional media queries with modern container queries.
+							Understand when and how to use each approach for responsive design.
+						</p>
+						<div class="card-tags">
+							<span class="tag">Container Queries</span>
+							<span class="tag">Media Queries</span>
+							<span class="tag">Comparison</span>
+						</div>
+						<a href="pages/06-container-vs-media.html" class="card-link">
+							<span>Compare Approaches</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">📦</span>
+							<h3 class="card-title">Container Query Basics</h3>
+						</div>
+						<p class="card-description">
+							Learn the fundamentals of container queries for component-based responsive design.
+							Style elements based on their container's dimensions.
+						</p>
+						<div class="card-tags">
+							<span class="tag">@container</span>
+							<span class="tag">Component Design</span>
+							<span class="tag">Intrinsic Design</span>
+						</div>
+						<a href="pages/07-container-query.html" class="card-link">
+							<span>Learn Container Queries</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🎨</span>
+							<h3 class="card-title">Responsive Container Design</h3>
+						</div>
+						<p class="card-description">
+							Build fully responsive components using container queries.
+							Create adaptable layouts that work in any context.
+						</p>
+						<div class="card-tags">
+							<span class="tag">Responsive Components</span>
+							<span class="tag">Flexible Layouts</span>
+							<span class="tag">Container Context</span>
+						</div>
+						<a href="pages/08-container-query-responsive.html" class="card-link">
+							<span>Build Responsive</span>
+							<span>→</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- CSS Variables & Functions Section -->
+			<section class="section">
+				<h2 class="section-title">
+					<span class="section-emoji">🔧</span>
+					CSS Variables & Functions
+				</h2>
+				<div class="cards-grid">
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">📐</span>
+							<h3 class="card-title">CSS Custom Properties</h3>
+						</div>
+						<p class="card-description">
+							Learn how to use CSS variables to create maintainable, scalable stylesheets.
+							Discover the power of dynamic theming and consistent design systems.
+						</p>
+						<div class="card-tags">
+							<span class="tag">CSS Variables</span>
+							<span class="tag">:root</span>
+							<span class="tag">Dynamic Styling</span>
+						</div>
+						<a href="pages/09-variables-css.html" class="card-link">
+							<span>Explore Variables</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🧮</span>
+							<h3 class="card-title">calc() Function</h3>
+						</div>
+						<p class="card-description">
+							Master mathematical calculations in CSS with calc().
+							Create dynamic layouts with mixed units and complex calculations.
+						</p>
+						<div class="card-tags">
+							<span class="tag">calc()</span>
+							<span class="tag">Mathematical CSS</span>
+							<span class="tag">Dynamic Values</span>
+						</div>
+						<a href="pages/10-function-calc.html" class="card-link">
+							<span>Calculate Values</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">📊</span>
+							<h3 class="card-title">clamp() Function</h3>
+						</div>
+						<p class="card-description">
+							Create fluid, responsive typography and layouts with clamp().
+							Set minimum, preferred, and maximum values in one declaration.
+						</p>
+						<div class="card-tags">
+							<span class="tag">clamp()</span>
+							<span class="tag">Fluid Typography</span>
+							<span class="tag">Responsive Values</span>
+						</div>
+						<a href="pages/11-function-clamp.html" class="card-link">
+							<span>Master clamp()</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">📏</span>
+							<h3 class="card-title">min() & max() Functions</h3>
+						</div>
+						<p class="card-description">
+							Explore min() and max() functions for responsive design.
+							Create adaptive layouts that respond intelligently to available space.
+						</p>
+						<div class="card-tags">
+							<span class="tag">min()</span>
+							<span class="tag">max()</span>
+							<span class="tag">Adaptive Design</span>
+						</div>
+						<a href="pages/11-function-min-max.html" class="card-link">
+							<span>Learn min/max</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">⚙️</span>
+							<h3 class="card-title">CSS Properties Deep Dive</h3>
+						</div>
+						<p class="card-description">
+							Explore advanced CSS properties and their practical applications.
+							Discover lesser-known properties that can enhance your designs.
+						</p>
+						<div class="card-tags">
+							<span class="tag">CSS Properties</span>
+							<span class="tag">Advanced Techniques</span>
+							<span class="tag">Best Practices</span>
+						</div>
+						<a href="pages/12-properties.html" class="card-link">
+							<span>Explore Properties</span>
+							<span>→</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Modern Color & Visual Effects Section -->
+			<section class="section">
+				<h2 class="section-title">
+					<span class="section-emoji">🌈</span>
+					Modern Color & Visual Effects
+				</h2>
+				<div class="cards-grid">
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🎨</span>
+							<h3 class="card-title">color-mix() Function</h3>
+						</div>
+						<p class="card-description">
+							Blend colors dynamically with the color-mix() function.
+							Create harmonious color palettes and smooth transitions programmatically.
+						</p>
+						<div class="card-tags">
+							<span class="tag">color-mix()</span>
+							<span class="tag">Color Blending</span>
+							<span class="tag">Dynamic Colors</span>
+						</div>
+						<a href="pages/13-color-mix.html" class="card-link">
+							<span>Mix Colors</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🌟</span>
+							<h3 class="card-title">New Color Models</h3>
+						</div>
+						<p class="card-description">
+							Explore modern color spaces like oklch(), lab(), and lch().
+							Access wider color gamuts and more intuitive color manipulation.
+						</p>
+						<div class="card-tags">
+							<span class="tag">oklch()</span>
+							<span class="tag">lab()</span>
+							<span class="tag">Color Spaces</span>
+						</div>
+						<a href="pages/14-new-color-models.html" class="card-link">
+							<span>Discover Colors</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">✨</span>
+							<h3 class="card-title">Backdrop Filter Effects</h3>
+						</div>
+						<p class="card-description">
+							Create stunning glass-morphism effects with backdrop-filter.
+							Apply blur, color, and other effects to background elements.
+						</p>
+						<div class="card-tags">
+							<span class="tag">backdrop-filter</span>
+							<span class="tag">Glass Morphism</span>
+							<span class="tag">Visual Effects</span>
+						</div>
+						<a href="pages/16-backdrop-filter.html" class="card-link">
+							<span>Create Glass Effects</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🎭</span>
+							<h3 class="card-title">Mix Blend Modes</h3>
+						</div>
+						<p class="card-description">
+							Master blend modes for creative visual effects.
+							Combine elements with multiply, screen, overlay, and other blend modes.
+						</p>
+						<div class="card-tags">
+							<span class="tag">mix-blend-mode</span>
+							<span class="tag">Blending</span>
+							<span class="tag">Creative Effects</span>
+						</div>
+						<a href="pages/17-mix-blend-mode.html" class="card-link">
+							<span>Blend Elements</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🎯</span>
+							<h3 class="card-title">Accent Color Theming</h3>
+						</div>
+						<p class="card-description">
+							Customize form controls with accent-color property.
+							Create cohesive themes for checkboxes, radio buttons, and sliders.
+						</p>
+						<div class="card-tags">
+							<span class="tag">accent-color</span>
+							<span class="tag">Form Styling</span>
+							<span class="tag">Theming</span>
+						</div>
+						<a href="pages/22-accent-color.html" class="card-link">
+							<span>Style Forms</span>
+							<span>→</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Animations & Interactions Section -->
+			<section class="section">
+				<h2 class="section-title">
+					<span class="section-emoji">🎬</span>
+					Animations & Interactions
+				</h2>
+				<div class="cards-grid">
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">📺</span>
+							<h3 class="card-title">View Timeline Animations</h3>
+						</div>
+						<p class="card-description">
+							Create scroll-driven animations with view-timeline and animation-timeline.
+							Build immersive experiences that respond to scroll position.
+						</p>
+						<div class="card-tags">
+							<span class="tag">view-timeline</span>
+							<span class="tag">Scroll Animations</span>
+							<span class="tag">Timeline API</span>
+						</div>
+						<a href="pages/15-animations-view-timeline-and-animation-timeline.html" class="card-link">
+							<span>Animate on Scroll</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🎯</span>
+							<h3 class="card-title">CSS Target Selector</h3>
+						</div>
+						<p class="card-description">
+							Master the :target pseudo-class to create interactive elements without JavaScript.
+							Build tabs, accordions, and modal-like experiences with pure CSS!
+						</p>
+						<div class="card-tags">
+							<span class="tag">:target</span>
+							<span class="tag">Pseudo-classes</span>
+							<span class="tag">Interactive</span>
+						</div>
+						<a href="pages/20-target.html" class="card-link">
+							<span>Learn Target</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🖱️</span>
+							<h3 class="card-title">Hover & Focus Within</h3>
+						</div>
+						<p class="card-description">
+							Create sophisticated hover effects and focus management with :focus-within.
+							Build accessible, interactive components with enhanced UX.
+						</p>
+						<div class="card-tags">
+							<span class="tag">:hover</span>
+							<span class="tag">:focus-within</span>
+							<span class="tag">Interactive UX</span>
+						</div>
+						<a href="pages/20-hover-focus-within.html" class="card-link">
+							<span>Interactive States</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🎠</span>
+							<h3 class="card-title">CSS-Only Carousel</h3>
+						</div>
+						<p class="card-description">
+							Build a smooth, responsive carousel using pure CSS.
+							Implement scroll-snap and smooth scrolling for optimal user experience.
+						</p>
+						<div class="card-tags">
+							<span class="tag">Carousel</span>
+							<span class="tag">scroll-snap</span>
+							<span class="tag">Pure CSS</span>
+						</div>
+						<a href="pages/21-carousel.html" class="card-link">
+							<span>Build Carousel</span>
+							<span>→</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Performance & Advanced Features Section -->
+			<section class="section">
+				<h2 class="section-title">
+					<span class="section-emoji">⚡</span>
+					Performance & Advanced Features
+				</h2>
+				<div class="cards-grid">
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">👁️</span>
+							<h3 class="card-title">Content Visibility</h3>
+						</div>
+						<p class="card-description">
+							Optimize rendering performance with content-visibility property.
+							Control element rendering and improve page load speeds significantly.
+						</p>
+						<div class="card-tags">
+							<span class="tag">content-visibility</span>
+							<span class="tag">Performance</span>
+							<span class="tag">Optimization</span>
+						</div>
+						<a href="pages/18-content-visivility.html" class="card-link">
+							<span>Optimize Rendering</span>
+							<span>→</span>
+						</a>
+					</div>
+
+					<div class="page-card">
+						<div class="card-header">
+							<span class="card-emoji">🔄</span>
+							<h3 class="card-title">Advanced Differ Techniques</h3>
+						</div>
+						<p class="card-description">
+							Explore advanced CSS techniques for visual differentiation.
+							Learn subtle ways to create hierarchy and improve user experience.
+						</p>
+						<div class="card-tags">
+							<span class="tag">Visual Hierarchy</span>
+							<span class="tag">UX Design</span>
+							<span class="tag">Advanced CSS</span>
+						</div>
+						<a href="pages/19-differ.html" class="card-link">
+							<span>Differentiate Elements</span>
+							<span>→</span>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<h3>🚀 Keep Learning & Building Amazing Things!</h3>
+			<p>
+				Each example demonstrates real-world CSS techniques used in modern web development.
+				Experiment, modify, and make them your own!
+			</p>
+			<p><strong>💡 Pro Tip:</strong> Open the developer tools to inspect and learn from the CSS code structure.</p>
+		</footer>
+	</div>
 </body>
 </html>
